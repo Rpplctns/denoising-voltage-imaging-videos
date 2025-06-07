@@ -1,0 +1,7 @@
+.venv
+data/HPC2
+data/optosynth
+**/__pycache__
+.idea
+.vscode
+**.pyc
