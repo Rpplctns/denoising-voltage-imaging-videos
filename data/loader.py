@@ -1,4 +1,6 @@
 import os
+
+import numpy as np
 import tifffile as tiff
 from tqdm import tqdm
 
@@ -13,6 +15,6 @@ def load(directory='./data/HPC2/', file: str = None):
 
 def normalize(frame):
     norm_frame = (frame - frame.min()) / (frame.max() - frame.min())
-    norm_frame = (norm_frame * 255).astype('uint8')
+    norm_frame = norm_frame.astype(np.float32)
     return norm_frame
 

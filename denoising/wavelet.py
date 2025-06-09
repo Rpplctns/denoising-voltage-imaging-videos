@@ -9,6 +9,6 @@ def wavelet_filter(vid, hyperparams=None):
     spacing_ratio = hyperparams["spacing_ratio"]
 
     rescaled = zoom(vid, (1, spacing_ratio, spacing_ratio), order=1)
-    filtered = denoise_wavelet(rescaled, wavelet=wavelet, mode=mode, multichannel=False, convert2ycbcr=False)
+    filtered = denoise_wavelet(rescaled, wavelet=wavelet, mode=mode)
     output_vid = zoom(filtered, (1, 1 / spacing_ratio, 1 / spacing_ratio), order=1)
     return output_vid
