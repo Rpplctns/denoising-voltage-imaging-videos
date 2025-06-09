@@ -18,9 +18,7 @@ def nl_means(vid, hyperparams=None):
         patch_size=patch_size,
         patch_distance=patch_distance,
         h=h,
-        fast_mode=True,
-        multichannel=False,
-        convert2ycbcr=False
+        fast_mode=True
     )
 
     return output_vid
