@@ -36,3 +36,11 @@ HYPER_WAVELET = np.array([
     ]
     for spacing_ratio in [0.5, 0.75, 1.0, 1.33, 2]
 ])
+
+HYPER_TV_MINIMIZATION = np.array([
+    [
+        {"weight": weight / 100, "spacing_ratio": spacing_ratio}
+        for weight in range(1, 51, 5)
+    ]
+    for spacing_ratio in [0.5, 0.75, 1.0, 1.33, 2]
+])
