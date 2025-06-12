@@ -9,9 +9,9 @@ HYPER_GAUSSIAN = np.array([
 OPT_HYPER_GAUSSIAN = {'kernel_size': 9, 'sigma_xy': 0.2, 'sigma_t': 1.8}
 
 HYPER_BILATERAL = np.array([
-    [[[{"kernel_size": 5, "sigma_xy": sigma_xy / 10, "sigma_t": sigma_t / 10, "sigma_intensity": sigma_intensity} for sigma_xy in range(6, 15, 2)] for sigma_t in range(6, 15, 2)] for sigma_intensity in range(20, 30, 3)],
-    [[[{"kernel_size": 7, "sigma_xy": sigma_xy / 10, "sigma_t": sigma_t / 10, "sigma_intensity": sigma_intensity} for sigma_xy in range(6, 15, 2)] for sigma_t in range(6, 15, 2)] for sigma_intensity in range(20, 30, 3)],
-    [[[{"kernel_size": 9, "sigma_xy": sigma_xy / 10, "sigma_t": sigma_t / 10, "sigma_intensity": sigma_intensity} for sigma_xy in range(6, 15, 2)] for sigma_t in range(6, 15, 2)] for sigma_intensity in range(20, 30, 3)],
+    [[[{"kernel_size": 5, "sigma_xy": sigma_xy / 10, "sigma_t": sigma_t / 10, "sigma_intensity": sigma_intensity} for sigma_xy in range(2, 6, 3)] for sigma_t in range(14, 21, 4)] for sigma_intensity in range(20, 30, 3)],
+    [[[{"kernel_size": 7, "sigma_xy": sigma_xy / 10, "sigma_t": sigma_t / 10, "sigma_intensity": sigma_intensity} for sigma_xy in range(2, 6, 3)] for sigma_t in range(14, 21, 4)] for sigma_intensity in range(20, 30, 3)],
+    [[[{"kernel_size": 9, "sigma_xy": sigma_xy / 10, "sigma_t": sigma_t / 10, "sigma_intensity": sigma_intensity} for sigma_xy in range(2, 6, 3)] for sigma_t in range(14, 21, 4)] for sigma_intensity in range(20, 30, 3)],
 ])
 
 HYPER_ANISOTROPIC = np.array([
