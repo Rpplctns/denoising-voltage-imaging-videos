@@ -1,5 +1,15 @@
 import numpy as np
 
+def temporal_snr_many(vids):
+    snrs = []
+    for vid in vids:
+        mean = np.mean(vid, axis=0)
+        sd = np.std(vid, axis=0)
+        with np.errstate(divide='ignore', invalid='ignore'):
+            snr = np.where(sd != 0, mean / sd, 0)
+        snrs.append(np.mean(snr))
+    return np.mean(snrs), np.percentile(snrs, 25)
+
 def temporal_snr(vid):
     mean = np.mean(vid, axis=0)
     sd = np.std(vid, axis=0)
